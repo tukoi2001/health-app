@@ -4,6 +4,13 @@ import router from "./router";
 import store from "./store";
 import vuetify from "./plugins/vuetify";
 import i18n from "@/plugins/i18n";
+import PerfectScrollbar from "vue2-perfect-scrollbar";
+
+import "@/styles/reset.css";
+import "../node_modules/nprogress/nprogress.css";
+import "vue2-perfect-scrollbar/dist/vue2-perfect-scrollbar.css";
+
+Vue.use(PerfectScrollbar);
 
 Vue.config.productionTip = false;
 

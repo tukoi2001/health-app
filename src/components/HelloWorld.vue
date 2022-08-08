@@ -1,7 +1,7 @@
 <template>
   <v-container>
-    <v-row class="text-center abc">
-      <v-col cols="12 abc__abc">
+    <v-row class="text-center">
+      <v-col cols="12">
         <v-img
           :src="require('../assets/logo.svg')"
           class="my-3"
@@ -11,7 +11,14 @@
       </v-col>
 
       <v-col class="mb-4">
-        <h1 class="display-2 font-weight-bold mb-3">Welcome to Vuetify</h1>
+        <h1 class="display-2 font-weight-bold mb-3">{{ $t("hello") }}</h1>
+        <div class="locale-changer">
+          <select v-model="$i18n.locale">
+            <option v-for="(lang, i) in langs" :key="`Lang${i}`" :value="lang">
+              {{ lang }}
+            </option>
+          </select>
+        </div>
 
         <p class="subheading font-weight-regular">
           For help and collaboration with other Vuetify developers,
@@ -69,6 +76,36 @@
           </a>
         </v-row>
       </v-col>
+      <v-col class="mb-5" cols="12">
+        <h2 class="headline font-weight-bold mb-3">Ecosystem</h2>
+
+        <v-row justify="center">
+          <a
+            v-for="(eco, i) in ecosystem"
+            :key="i"
+            :href="eco.href"
+            class="subheading mx-3"
+            target="_blank"
+          >
+            {{ eco.text }}
+          </a>
+        </v-row>
+      </v-col>
+      <v-col class="mb-5" cols="12">
+        <h2 class="headline font-weight-bold mb-3">Ecosystem</h2>
+
+        <v-row justify="center">
+          <a
+            v-for="(eco, i) in ecosystem"
+            :key="i"
+            :href="eco.href"
+            class="subheading mx-3"
+            target="_blank"
+          >
+            {{ eco.text }}
+          </a>
+        </v-row>
+      </v-col>
     </v-row>
   </v-container>
 </template>
@@ -78,7 +115,6 @@ import Vue from "vue";
 
 export default Vue.extend({
   name: "HelloWorld",
-
   data: () => ({
     ecosystem: [
       {
@@ -130,13 +166,8 @@ export default Vue.extend({
         href: "https://vuetifyjs.com/getting-started/frequently-asked-questions",
       },
     ],
+    langs: ["vi", "en"],
   }),
 });
 </script>
-<style lang="scss" scoped>
-.abc {
-  &__abc {
-    background-color: #000;
-  }
-}
-</style>
+<style lang="scss" scoped></style>
