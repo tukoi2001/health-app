@@ -9,5 +9,5 @@ export namespace App {
     title: string;
     icon: string;
     href: string;
-  }
+  };
 }
