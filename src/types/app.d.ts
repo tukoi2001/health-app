@@ -4,4 +4,10 @@ export namespace App {
     country: string;
     locate: string;
   };
+
+  type Navigation = {
+    title: string;
+    icon: string;
+    href: string;
+  }
 }

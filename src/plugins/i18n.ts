@@ -10,6 +10,13 @@ const messages = {
     search: "Search for products...",
     select_language: "Select language",
     close: "Close",
+    home: "Homepage",
+    shopping: "Shopping",
+    blogs: "Blogs",
+    about_us: "About Us",
+    contact: "Contact",
+    account_setting: "Account Setting",
+    logout: "Logout",
   },
   vi: {
     top_header:
@@ -17,6 +24,13 @@ const messages = {
     search: "Tìm kiếm sản phẩm...",
     select_language: "Lựa chọn ngôn ngữ",
     close: "Đóng",
+    home: "Trang Chủ",
+    shopping: "Mua Sắm",
+    blogs: "Nhật Ký",
+    about_us: "Về Chúng Tôi",
+    contact: "Liên Hệ",
+    account_setting: "Tài Khoản",
+    logout: "Đăng Xuất",
   },
 };
 
