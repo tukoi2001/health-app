@@ -8,14 +8,20 @@ Vue.use(VueRouter);
 const routes: Array<RouteConfig> = [
   {
     path: "/",
-    name: "home",
+    name: "Home",
     component: HomeView,
+    meta: {
+      title: "Home",
+    },
   },
   {
     path: "/about",
-    name: "about",
+    name: "About",
     component: () =>
       import(/* webpackChunkName: "about" */ "../views/AboutView.vue"),
+    meta: {
+      title: "About",
+    },
   },
 ];
 
@@ -23,6 +29,11 @@ const router = new VueRouter({
   mode: "history",
   base: process.env.BASE_URL,
   routes,
+});
+
+router.beforeEach((to, from, next) => {
+  document.title = `Heath | ${to.meta?.title}`;
+  next();
 });
 
 router.beforeResolve((to, from, next) => {

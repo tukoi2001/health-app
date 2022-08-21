@@ -17,6 +17,13 @@ const messages = {
     contact: "Contact",
     account_setting: "Account Setting",
     logout: "Logout",
+    shopping_now: "Shopping Now!",
+    subtitle_mask:
+      "Prevent millions of harmful bacteria, and dust to protect health.",
+    subtitle_spray: "Get rid of all bacteria in your home.",
+    subtitle_teeth: "Keep your teeth white, bright.",
+    anti_bacterial: "Anti-Bacterial",
+    anti_virus: "Anti-Virus",
   },
   vi: {
     top_header:
@@ -31,6 +38,13 @@ const messages = {
     contact: "Liên Hệ",
     account_setting: "Tài Khoản",
     logout: "Đăng Xuất",
+    shopping_now: "Mua Sắm Ngay!",
+    subtitle_mask:
+      "Ngăn chặn hàng triệu vi khuẩn có hại, bụi bẩn để bảo vệ sức khỏe.",
+    subtitle_spray: "Loại bỏ tất cả vi khuẩn trong nhà của bạn.",
+    subtitle_teeth: "Giữ cho hàm răng của bạn luôn trắng sáng.",
+    anti_bacterial: "Chống vi khuẩn",
+    anti_virus: "Chống vi rút",
   },
 };
 

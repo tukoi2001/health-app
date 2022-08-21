@@ -1,16 +1,20 @@
 <template>
-  <DefaultLayout></DefaultLayout>
+  <DefaultLayout>
+    <TheSlider />
+  </DefaultLayout>
 </template>
 
 <script lang="ts">
 import Vue from "vue";
 import DefaultLayout from "@/layouts/DefaultLayout.vue";
+import TheSlider from "@/components/common/TheSlider.vue";
 
 export default Vue.extend({
   name: "HomeView",
 
   components: {
     DefaultLayout,
+    TheSlider,
   },
 });
 </script>
