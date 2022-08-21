@@ -23,6 +23,16 @@ const routes: Array<RouteConfig> = [
       title: "About",
     },
   },
+  // Auth
+  {
+    path: "/login",
+    name: "Login",
+    component: () =>
+      import(/* webpackChunkName: "about" */ "../views/Auth/Login.vue"),
+    meta: {
+      title: "Login",
+    },
+  },
 ];
 
 const router = new VueRouter({
