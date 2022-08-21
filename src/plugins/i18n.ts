@@ -24,6 +24,7 @@ const messages = {
     subtitle_teeth: "Keep your teeth white, bright.",
     anti_bacterial: "Anti-Bacterial",
     anti_virus: "Anti-Virus",
+    back_to_home: "Back To Home",
   },
   vi: {
     top_header:
@@ -45,6 +46,7 @@ const messages = {
     subtitle_teeth: "Giữ cho hàm răng của bạn luôn trắng sáng.",
     anti_bacterial: "Chống vi khuẩn",
     anti_virus: "Chống vi rút",
+    back_to_home: "Trở về trang chủ",
   },
 };
 
