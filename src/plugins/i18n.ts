@@ -25,6 +25,12 @@ const messages = {
     anti_bacterial: "Anti-Bacterial",
     anti_virus: "Anti-Virus",
     back_to_home: "Back To Home",
+    login: "Login",
+    forgot_username_password: "Forgot Username / Password?",
+    create_new_account: "Create New Account",
+    email: "Email",
+    password: "Password",
+    least_characters: "At least 8 characters",
   },
   vi: {
     top_header:
@@ -47,6 +53,12 @@ const messages = {
     anti_bacterial: "Chống vi khuẩn",
     anti_virus: "Chống vi rút",
     back_to_home: "Trở về trang chủ",
+    login: "Đăng Nhập",
+    forgot_username_password: "Quên tên đăng nhập / mật khẩu?",
+    create_new_account: "Tạo tài khoản mới",
+    email: "Email",
+    password: "Mật khẩu",
+    least_characters: "Ít nhất 8 ký tự",
   },
 };
 

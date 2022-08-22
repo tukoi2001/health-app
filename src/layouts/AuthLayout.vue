@@ -11,26 +11,9 @@
         </div>
         <v-container>
           <div class="auth-layout__wrap">
-            <v-row>
-              <v-col cols="6" sm="6" md="6" lg="6">
-                <div class="auth-layout__slider">
-                  <v-carousel cycle hide-delimiters show-arrows-on-hover>
-                    <v-carousel-item
-                      v-for="(item, i) in items"
-                      :key="i"
-                      :src="item.src"
-                      reverse-transition="fade-transition"
-                      transition="fade-transition"
-                    ></v-carousel-item>
-                  </v-carousel>
-                </div>
-              </v-col>
-              <v-col cols="6" sm="6" md="6" lg="6">
-                <div class="auth-layout__right">
-                  <slot></slot>
-                </div>
-              </v-col>
-            </v-row>
+            <div class="auth-layout__box">
+              <slot></slot>
+            </div>
           </div>
         </v-container>
       </div>
@@ -43,21 +26,6 @@ import Vue from "vue";
 
 export default Vue.extend({
   name: "AuthLayout",
-  data() {
-    return {
-      items: [
-        {
-          src: require("@/assets/images/auth/img-1.jpg"),
-        },
-        {
-          src: require("@/assets/images/auth/img-2.jpg"),
-        },
-        {
-          src: require("@/assets/images/auth/img-3.jpg"),
-        },
-      ],
-    };
-  },
 });
 </script>
 
@@ -70,7 +38,9 @@ export default Vue.extend({
   justify-content: center;
   align-items: center;
   padding: 15px;
-  background: -webkit-linear-gradient(bottom, #3c5b8a, #103178);
+  background-image: url("../assets/images/auth/img-1.jpg");
+  background-position: center;
+  background-size: cover;
   overflow: hidden;
   position: relative;
 
@@ -81,25 +51,21 @@ export default Vue.extend({
   }
 
   &__wrap {
-    background-color: rgba(244, 234, 234, 0.3);
+    background-color: rgba(244, 234, 234, 0);
     height: 80%;
     border-radius: 8px;
     padding: 20px;
   }
 
-  &__slider {
-    border-radius: 8px;
-    overflow: hidden;
-  }
-
-  &__right {
-    width: 350px;
+  &__box {
+    width: 380px;
     height: 100%;
     background: #fff;
     border-radius: 8px;
     overflow: hidden;
     margin: 0 auto;
     padding: 30px;
+    box-shadow: 0px 2px 3px #cdd8df;
   }
 }
 
