@@ -1,7 +1,7 @@
 <template>
   <div class="side-bar">
     <v-card>
-      <v-navigation-drawer permanent expand-on-hover>
+      <v-navigation-drawer permanent v-model="drawer" :mini-variant.sync="mini">
         <v-list>
           <v-list-item class="px-2">
             <v-list-item-avatar>
@@ -52,6 +52,14 @@
         </v-list>
       </v-navigation-drawer>
     </v-card>
+    <div
+      @click.stop="mini = !mini"
+      :class="['side-bar__arrow', { 'side-bar__arrow--active': !mini }]"
+    >
+      <v-btn icon dark>
+        <v-icon>mdi-chevron-left</v-icon>
+      </v-btn>
+    </div>
   </div>
 </template>
 
@@ -60,6 +68,12 @@ import Vue from "vue";
 
 export default Vue.extend({
   name: "SideBar",
+  data() {
+    return {
+      drawer: true,
+      mini: true,
+    };
+  },
   computed: {
     firstNavigation() {
       return [
@@ -112,6 +126,22 @@ export default Vue.extend({
 <style lang="scss" scoped>
 .side-bar {
   height: calc(100vh - 94px);
+  position: relative;
+
+  &__arrow {
+    position: absolute;
+    top: 50%;
+    right: -15px;
+    transform: translateY(-50%) rotate(180deg);
+    border-radius: 50%;
+    background-color: #507ddc;
+    cursor: pointer;
+    z-index: 999;
+
+    &--active {
+      transform: translateY(-50%) rotate(0);
+    }
+  }
 
   &__bottom {
     position: absolute;
