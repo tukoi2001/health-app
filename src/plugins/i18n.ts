@@ -30,7 +30,18 @@ const messages = {
     create_new_account: "Create New Account",
     email: "Email",
     password: "Password",
-    least_characters: "At least 8 characters",
+    least_characters: "At least 8 characters.",
+    register: "Register",
+    already_have_account: "Already have an account?",
+    full_name: "Full Name",
+    repeat_password: "Repeat Password",
+    password_must_identical: "Passwords must be identical",
+    must_accept_terms_and_conditions: "Must accept terms and conditions!",
+    agree_all_terms_and_conditions:
+      "I agree all statements in Terms of Conditions.",
+    required: "Required.",
+    invalid_email: "Invalid e-mail.",
+    repeat_password_not_match: "The repeat password does not match!",
   },
   vi: {
     top_header:
@@ -59,6 +70,18 @@ const messages = {
     email: "Email",
     password: "Mật khẩu",
     least_characters: "Ít nhất 8 ký tự",
+    register: "Đăng ký",
+    already_have_account: "Bạn đã có tài khoản rồi?",
+    full_name: "Tên đầy đủ",
+    repeat_password: "Nhập lại mật khẩu",
+    password_must_identical: "Mật khẩu phải giống hệt nhau",
+    must_accept_terms_and_conditions:
+      "Phải chấp nhận các điều khoản và điều kiện!",
+    agree_all_terms_and_conditions:
+      "Tôi đồng ý tất cả các tuyên bố trong Điều khoản Điều kiện.",
+    required: "Yêu cầu bắt buộc.",
+    invalid_email: "Email không đúng định dạng.",
+    repeat_password_not_match: "Mật khẩu nhập lại không khớp!",
   },
 };
 

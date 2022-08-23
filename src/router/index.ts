@@ -33,6 +33,15 @@ const routes: Array<RouteConfig> = [
       title: "Login",
     },
   },
+  {
+    path: "/register",
+    name: "Register",
+    component: () =>
+      import(/* webpackChunkName: "about" */ "../views/Auth/Register.vue"),
+    meta: {
+      title: "Register",
+    },
+  },
 ];
 
 const router = new VueRouter({

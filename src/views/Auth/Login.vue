@@ -81,12 +81,12 @@ export default Vue.extend({
       show1: false,
       isValid: false,
       rules: {
-        required: (value: string) => !!value || "Required.",
-        min: (v: string) => v.length >= 8 || "Min 8 characters",
+        required: (value: string) => !!value || this.$t("required"),
+        min: (v: string) => v.length >= 8 || this.$t("least_characters"),
         email: (value: string) => {
           const pattern =
             /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-          return pattern.test(value) || "Invalid e-mail.";
+          return pattern.test(value) || this.$t("invalid_email");
         },
       },
     };
@@ -99,87 +99,4 @@ export default Vue.extend({
 });
 </script>
 
-<style lang="scss" scoped>
-.the-login {
-  position: relative;
-
-  &__title {
-    font-size: 28px;
-    font-weight: bold;
-    text-align: center;
-    color: #103178;
-  }
-
-  &__label {
-    font-size: 13px;
-    font-weight: 600;
-    line-height: 20px;
-    margin-bottom: 5px;
-    display: block;
-  }
-
-  &__forgot {
-    &-link {
-      text-decoration: none;
-      font-size: 12px;
-      text-align: right;
-      display: block;
-      color: #333;
-      margin-bottom: 18px;
-      transition: all 0.3s ease-in-out;
-      font-weight: 500;
-
-      &:hover {
-        color: #103178;
-      }
-    }
-  }
-
-  &__footer {
-    margin-top: 120px;
-
-    &-link {
-      text-decoration: none;
-      font-size: 14px;
-      text-align: center;
-      display: block;
-      color: #333;
-      transition: all 0.3s ease-in-out;
-      font-weight: 600;
-
-      &:hover {
-        color: #103178;
-      }
-    }
-  }
-}
-
-::v-deep {
-  .v-text-field__slot {
-    label {
-      font-size: 14px;
-    }
-
-    input {
-      font-size: 14px;
-      font-weight: 600;
-    }
-  }
-
-  .the-login__button {
-    .v-btn__content {
-      color: #fff;
-      font-size: 17px;
-      font-weight: 600;
-    }
-  }
-
-  .v-text-field__details {
-    margin-bottom: 3px !important;
-
-    .v-messages__message {
-      font-weight: 600;
-    }
-  }
-}
-</style>
+<style lang="scss" scoped src="@/styles/auth/style.scss"></style>
