@@ -42,6 +42,15 @@ const routes: Array<RouteConfig> = [
       title: "Register",
     },
   },
+  {
+    path: "/forgot-password",
+    name: "ResetPassword",
+    component: () =>
+      import(/* webpackChunkName: "about" */ "../views/Auth/ResetPassword.vue"),
+    meta: {
+      title: "ResetPassword",
+    },
+  },
 ];
 
 const router = new VueRouter({

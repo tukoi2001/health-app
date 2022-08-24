@@ -42,6 +42,8 @@ const messages = {
     required: "Required.",
     invalid_email: "Invalid e-mail.",
     repeat_password_not_match: "The repeat password does not match!",
+    forget_password: "Forget Password",
+    submit: "Submit",
   },
   vi: {
     top_header:
@@ -82,6 +84,8 @@ const messages = {
     required: "Yêu cầu bắt buộc.",
     invalid_email: "Email không đúng định dạng.",
     repeat_password_not_match: "Mật khẩu nhập lại không khớp!",
+    forget_password: "Quên mật khẩu",
+    submit: "Xác nhận",
   },
 };
 
