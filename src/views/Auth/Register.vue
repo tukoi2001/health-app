@@ -13,7 +13,7 @@
             rounded
             id="fullName"
             height="40"
-            prepend-inner-icon="mdi-account-outline"
+            prepend-inner-icon="mdi-email-outline"
             name="fullName"
             :label="$t('full_name')"
             placeholder="David Backer"
