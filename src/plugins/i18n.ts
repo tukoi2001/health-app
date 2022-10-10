@@ -44,6 +44,22 @@ const messages = {
     repeat_password_not_match: "The repeat password does not match!",
     forget_password: "Forget Password",
     submit: "Submit",
+    my_address: "Da Nang City, Viet Nam",
+    need_help: "Need Help?",
+    monday_friday: "Monday – Friday: 9:00-20:00",
+    saturday: "Saturday: 11:00 – 15:00",
+    please_come_with_us:
+      "Hãy đến với chúng tôi, chúng tôi chuyên cung cấp các sản phẩm chính hãng! Cam kết 100%.",
+    policy: "Chính sách",
+    terms_and_conditions: "Điều khoản và điều kiện",
+    payment_method: "Phương thức thanh toán",
+    product_warranty: "Bảo hành sản phẩm",
+    return_process: "Quy trình trả hàng",
+    payment_security: "Bảo mật thanh toán",
+    sign_up_to_receive_information: "Đăng ký để nhận thông tin",
+    receive_new_and_free_content:
+      "Tham gia để nhận được nội dung mới và miễn phí được phân phối tự động mỗi khi chúng tôi xuất bản.",
+    copyright: " Copyright © 2022 by Tu Xuan. All Rights Reserved",
   },
   vi: {
     top_header:
@@ -86,6 +102,22 @@ const messages = {
     repeat_password_not_match: "Mật khẩu nhập lại không khớp!",
     forget_password: "Quên mật khẩu",
     submit: "Xác nhận",
+    my_address: "Thành phố Đà Nẵng, Việt Nam",
+    need_help: "Cần giúp đỡ?",
+    monday_friday: "Monday – Friday: 9:00-20:00",
+    saturday: "Saturday: 11:00 – 15:00",
+    please_come_with_us:
+      "Hãy đến với chúng tôi, chúng tôi chuyên cung cấp các sản phẩm chính hãng! Cam kết 100%.",
+    policy: "Chính sách",
+    terms_and_conditions: "Điều khoản và điều kiện",
+    payment_method: "Phương thức thanh toán",
+    product_warranty: "Bảo hành sản phẩm",
+    return_process: "Quy trình trả hàng",
+    payment_security: "Bảo mật thanh toán",
+    sign_up_to_receive_information: "Đăng ký để nhận thông tin",
+    receive_new_and_free_content:
+      "Tham gia để nhận được nội dung mới và miễn phí được phân phối tự động mỗi khi chúng tôi xuất bản.",
+    copyright: " Copyright © 2022 by Tu Xuan. All Rights Reserved",
   },
 };
 
