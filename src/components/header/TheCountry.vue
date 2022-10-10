@@ -49,7 +49,7 @@
 
 <script lang="ts">
 import Vue from "vue";
-import { LocationApp } from "@/types/app";
+import { App } from "@/types/app";
 import { changeLocate } from "@/plugins/i18n";
 
 export default Vue.extend({
@@ -78,7 +78,7 @@ export default Vue.extend({
     };
   },
   methods: {
-    handleSelectLocate(location: LocationApp): void {
+    handleSelectLocate(location: App.LocationApp): void {
       this.currentLocation = location;
       changeLocate(location.locate);
       this.isShowDialog = false;

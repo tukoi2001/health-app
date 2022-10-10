@@ -66,6 +66,7 @@
 <script lang="ts">
 import Vue from "vue";
 import { DEFAULT_LOGO } from "@/configs/constant";
+import { App } from "@/types/app";
 
 export default Vue.extend({
   name: "SideBar",
@@ -77,7 +78,7 @@ export default Vue.extend({
     };
   },
   computed: {
-    firstNavigation() {
+    firstNavigation(): App.Navigation[] {
       return [
         {
           title: "home",
@@ -107,7 +108,7 @@ export default Vue.extend({
       ];
     },
 
-    secondNavigation() {
+    secondNavigation(): App.Navigation[] {
       return [
         {
           title: "account_setting",
