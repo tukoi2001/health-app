@@ -8,6 +8,7 @@
           <perfect-scrollbar>
             <div class="layout-master__main">
               <slot></slot>
+              <TheFooter />
             </div>
           </perfect-scrollbar>
         </div>
@@ -20,12 +21,14 @@
 import Vue from "vue";
 import TheHeader from "@/components/header/TheHeader.vue";
 import SideBar from "@/components/common/SideBar.vue";
+import TheFooter from "@/components/footer/TheFooter.vue";
 
 export default Vue.extend({
   name: "DefaultLayout",
   components: {
     TheHeader,
     SideBar,
+    TheFooter,
   },
 });
 </script>

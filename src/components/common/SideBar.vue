@@ -1,14 +1,14 @@
 <template>
   <div class="side-bar">
     <v-card>
-      <v-navigation-drawer permanent v-model="drawer" :mini-variant.sync="mini">
+      <v-navigation-drawer permanent v-model="drawer" :mini-variant="mini">
         <v-list>
           <v-list-item class="px-2">
             <v-list-item-avatar>
               <v-img :src="require('@/assets/images/logo/logo.svg')" />
             </v-list-item-avatar>
             <v-list-item-title class="side-bar__title">
-              MyMeDi
+              {{ logo }}
             </v-list-item-title>
           </v-list-item>
         </v-list>
@@ -65,11 +65,13 @@
 
 <script lang="ts">
 import Vue from "vue";
+import { DEFAULT_LOGO } from "@/configs/constant";
 
 export default Vue.extend({
   name: "SideBar",
   data() {
     return {
+      logo: DEFAULT_LOGO,
       drawer: true,
       mini: true,
     };
@@ -134,7 +136,7 @@ export default Vue.extend({
     right: -15px;
     transform: translateY(-50%) rotate(180deg);
     border-radius: 50%;
-    background-color: #507ddc;
+    background-color: #fd8d27;
     cursor: pointer;
     z-index: 999;
 
