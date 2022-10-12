@@ -1,6 +1,7 @@
 <template>
   <DefaultLayout>
     <TheSlider />
+    <TheSubscribe />
   </DefaultLayout>
 </template>
 
@@ -8,12 +9,14 @@
 import Vue from "vue";
 import DefaultLayout from "@/layouts/DefaultLayout.vue";
 import TheSlider from "@/components/common/TheSlider.vue";
+import TheSubscribe from "./elements/TheSubscribe.vue";
 
 export default Vue.extend({
-  name: "HomeView",
+  name: "HomePage",
   components: {
     DefaultLayout,
     TheSlider,
+    TheSubscribe,
   },
   created() {
     Vue.$toast.open({

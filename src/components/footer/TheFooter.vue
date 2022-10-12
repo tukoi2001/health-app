@@ -41,7 +41,7 @@
             </h4>
             <div class="pt-3">
               <p class="ma-0 footer__middle-contact-subtitle">
-                {{ $t("mondayFriday") }}
+                {{ $t("monday_friday") }}
               </p>
               <p class="ma-0 footer__middle-contact-subtitle">
                 {{ $t("saturday") }}
