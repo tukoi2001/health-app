@@ -1,7 +1,7 @@
 import Vue from "vue";
 import VueRouter, { RouteConfig } from "vue-router";
 import NProgress from "nprogress";
-import HomeView from "../views/HomeView.vue";
+import HomeView from "../views/HomePage/HomePage.vue";
 
 Vue.use(VueRouter);
 

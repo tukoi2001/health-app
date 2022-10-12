@@ -60,6 +60,10 @@ const messages = {
     receive_new_and_free_content:
       "Tham gia để nhận được nội dung mới và miễn phí được phân phối tự động mỗi khi chúng tôi xuất bản.",
     copyright: " Copyright © 2022 by Tu Xuan. All Rights Reserved",
+    enter_your_email_address: "Enter your email address",
+    join_our_newsletter_and_get_discount_for_your_first_order:
+      "Join our newsletter and get $20 discount for your first order",
+    subscribe: "Subscribe",
   },
   vi: {
     top_header:
@@ -118,6 +122,10 @@ const messages = {
     receive_new_and_free_content:
       "Tham gia để nhận được nội dung mới và miễn phí được phân phối tự động mỗi khi chúng tôi xuất bản.",
     copyright: " Copyright © 2022 by Tu Xuan. All Rights Reserved",
+    enter_your_email_address: "Enter your email address",
+    join_our_newsletter_and_get_discount_for_your_first_order:
+      "Join our newsletter and get $20 discount for your first order",
+    subscribe: "Subscribe",
   },
 };
 

@@ -1,11 +1,11 @@
 <template>
   <div class="the-slider">
     <v-carousel
-      cycle
       hide-delimiter-background
       show-arrows-on-hover
       height="600"
       hide-delimiters
+      cycle
     >
       <v-carousel-item
         v-for="(item, i) in items"
@@ -127,10 +127,10 @@ export default Vue.extend({
     justify-content: center;
     align-items: center;
     padding-left: 90px;
+    height: 100%;
   }
 
   &__left {
-    height: 100%;
     flex-shrink: 0;
     flex-grow: 0;
 
