@@ -1,6 +1,8 @@
 <template>
   <DefaultLayout>
     <TheSlider />
+    <TheService />
+    <PopularCategory />
     <TheSubscribe />
   </DefaultLayout>
 </template>
@@ -10,6 +12,8 @@ import Vue from "vue";
 import DefaultLayout from "@/layouts/DefaultLayout.vue";
 import TheSlider from "@/components/common/TheSlider.vue";
 import TheSubscribe from "./elements/TheSubscribe.vue";
+import TheService from "@/components/common/TheService.vue";
+import PopularCategory from "./elements/PopularCategory.vue";
 
 export default Vue.extend({
   name: "HomePage",
@@ -17,6 +21,8 @@ export default Vue.extend({
     DefaultLayout,
     TheSlider,
     TheSubscribe,
+    TheService,
+    PopularCategory,
   },
   created() {
     Vue.$toast.open({
