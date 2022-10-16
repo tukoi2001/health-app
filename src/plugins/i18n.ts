@@ -64,6 +64,15 @@ const messages = {
     join_our_newsletter_and_get_discount_for_your_first_order:
       "Join our newsletter and get $20 discount for your first order",
     subscribe: "Subscribe",
+    popular_categories: "Popular categories",
+    title_free_shipping: "Giao hàng miễn phí",
+    subtitle_free_shipping: "Miễn phí mọi đơn hàng",
+    title_refund: "Hoàn tiền 100%",
+    subtitle_refund: "Hoàn tiền các đơn hàng",
+    title_payment_everywhere: "Thanh toán mọi lúc",
+    subtitle_payment_everywhere: "Thanh toán thật dễ dàng",
+    title_customer_contact: "Hỗ trợ khách hàng 24/7",
+    subtitle_customer_contact: `Phone number: {phone}`,
   },
   vi: {
     top_header:
@@ -126,6 +135,15 @@ const messages = {
     join_our_newsletter_and_get_discount_for_your_first_order:
       "Join our newsletter and get $20 discount for your first order",
     subscribe: "Subscribe",
+    popular_categories: "Popular categories",
+    title_free_shipping: "Giao hàng miễn phí",
+    subtitle_free_shipping: "Miễn phí mọi đơn hàng",
+    title_refund: "Hoàn tiền 100%",
+    subtitle_refund: "Hoàn tiền các đơn hàng",
+    title_payment_everywhere: "Thanh toán mọi lúc",
+    subtitle_payment_everywhere: "Thanh toán thật dễ dàng",
+    title_customer_contact: "Hỗ trợ khách hàng 24/7",
+    subtitle_customer_contact: `Phone number: {phone}`,
   },
 };
 
