@@ -65,6 +65,13 @@ export default Vue.extend({
     border: 1px solid #103178;
     padding: 15px;
     border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      transform: scale(1.03);
+    }
   }
 
   &__content {

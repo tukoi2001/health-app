@@ -1,7 +1,7 @@
 <template>
   <v-container class="pa-0">
     <v-row>
-      <v-col cols="2" sm="2" md="2" lg="2" class="pa-0">
+      <v-col cols="3" sm="3" md="3" lg="3">
         <div class="footer__left">
           <div class="my-4">
             <v-img
@@ -29,7 +29,7 @@
           </div>
         </div>
       </v-col>
-      <v-col cols="3" sm="3" md="3" lg="3" class="pa-0">
+      <v-col cols="4" sm="4" md="4" lg="4">
         <div class="footer__middle px-4">
           <h4 class="ma-0 footer__middle-title pt-2">
             {{ $t("need_help") }}
@@ -59,11 +59,8 @@
           </div>
         </div>
       </v-col>
-      <v-col cols="3" sm="3" md="3" lg="3" class="pa-0">
+      <v-col cols="2" sm="2" md="2" lg="2">
         <div class="footer__right mb-4">
-          <p class="footer__right-des mb-4">
-            {{ $t("please_come_with_us") }}
-          </p>
           <div class="footer__right-box">
             <h4 class="footer__right-box-title mb-2">{{ $t("policy") }}</h4>
             <ul class="footer__right-box-list pa-0">
@@ -96,37 +93,11 @@
           </div>
         </div>
       </v-col>
-      <v-col cols="4" sm="4" md="4" lg="4">
+      <v-col cols="3" sm="3" md="3" lg="3">
         <div class="footer__register text-left pl-10">
-          <h4 class="ma-0 footer__middle-title">
-            {{ $t("sign_up_to_receive_information") }}
-          </h4>
-          <div class="my-6">
-            <template>
-              <v-text-field
-                dense
-                outlined
-                rounded
-                id="email"
-                height="40"
-                prepend-inner-icon="mdi-email-outline"
-                name="email"
-                :label="$t('email')"
-                placeholder="abc@demo.com"
-                v-model="email"
-                :rules="[rules.email]"
-              />
-            </template>
-            <v-btn
-              type="submit"
-              rounded
-              width="100%"
-              class="footer__register-button"
-              color="#fd8d27"
-            >
-              {{ $t("submit") }}
-            </v-btn>
-          </div>
+          <p class="footer__right-des mb-4">
+            {{ $t("please_come_with_us") }}
+          </p>
           <p class="footer__right-des">
             {{ $t("receive_new_and_free_content") }}
           </p>
@@ -158,16 +129,8 @@ export default Vue.extend({
   name: "TheFooter",
   data() {
     return {
-      email: "",
       phoneNumber: PHONE_NUMBER,
       defaultEmail: DEFAULT_EMAIL,
-      rules: {
-        email: (value: string) => {
-          const pattern =
-            /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-          return pattern.test(value) || this.$t("invalid_email");
-        },
-      },
     };
   },
 });
