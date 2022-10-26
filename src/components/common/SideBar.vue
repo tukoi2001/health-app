@@ -98,7 +98,7 @@ export default Vue.extend({
         {
           title: "about_us",
           icon: "mdi-account-multiple-check-outline",
-          href: "/about-us",
+          href: "/about",
         },
         {
           title: "contact",
@@ -171,11 +171,15 @@ export default Vue.extend({
     }
   }
 
-  .router-link-active {
+  .router-link-exact-active {
     font-weight: 900;
     color: #103178;
 
     & > .side-bar__link--active {
+      visibility: visible;
+    }
+
+    & ~ .side-bar__link--active {
       visibility: visible;
     }
   }
