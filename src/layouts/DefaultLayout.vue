@@ -41,6 +41,7 @@ export default Vue.extend({
 .ps {
   max-height: 100%;
   height: 100%;
+  flex-grow: 1;
 }
 
 .layout-master {

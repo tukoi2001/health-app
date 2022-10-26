@@ -23,6 +23,17 @@ const routes: Array<RouteConfig> = [
       title: "About",
     },
   },
+  {
+    path: "/account-setting",
+    name: "AccountSetting",
+    component: () =>
+      import(
+        /* webpackChunkName: "about" */ "../views/AccountSetting/AccountSetting.vue"
+      ),
+    meta: {
+      title: "Account Setting",
+    },
+  },
   // Auth
   {
     path: "/login",
