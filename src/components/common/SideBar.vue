@@ -128,7 +128,7 @@ export default Vue.extend({
 
 <style lang="scss" scoped>
 .side-bar {
-  height: calc(100vh - 94px);
+  height: calc(100vh - 72px);
   position: relative;
 
   &__arrow {

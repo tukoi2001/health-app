@@ -55,4 +55,10 @@ export default Vue.extend({
     width: 100%;
   }
 }
+
+::v-deep {
+  .container {
+    padding: 5px 12px;
+  }
+}
 </style>
