@@ -114,6 +114,8 @@ const messages = {
     accomplished: "Accomplished",
     amount: "Amount",
     the_total_amount: "The Total Amount",
+    messages: "Messages",
+    send_us_a_message: "Send us a message",
   },
   vi: {
     top_header:
@@ -226,6 +228,8 @@ const messages = {
     accomplished: "Accomplished",
     amount: "Amount",
     the_total_amount: "The Total Amount",
+    messages: "Messages",
+    send_us_a_message: "Send us a message",
   },
 };
 
