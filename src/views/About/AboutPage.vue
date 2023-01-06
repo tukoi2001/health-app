@@ -1,7 +1,7 @@
 <template>
   <DefaultLayout>
-    <Breadcrumbs :titleOne="$t('contact')" />
-    <MainContact />
+    <Breadcrumbs :titleOne="$t('about_us')" />
+    <MainAbout />
   </DefaultLayout>
 </template>
 
@@ -9,14 +9,14 @@
 import Vue from "vue";
 import DefaultLayout from "@/layouts/DefaultLayout.vue";
 import Breadcrumbs from "@/components/common/Breadcrumbs.vue";
-import MainContact from "./elements/MainContact.vue";
+import MainAbout from "./elements/MainAbout.vue";
 
 export default Vue.extend({
-  name: "ContactUs",
+  name: "AboutPage",
   components: {
     DefaultLayout,
     Breadcrumbs,
-    MainContact,
+    MainAbout,
   },
 });
 </script>

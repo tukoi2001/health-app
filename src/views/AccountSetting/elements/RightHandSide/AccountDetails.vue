@@ -225,14 +225,14 @@ export default Vue.extend({
         this.isEdit = true;
       }
     },
-    handleUploadFile(event: Event): void {
+    handleUploadFile(event: any): void {
       this.isUpload = true;
-      this.formData.file = event.target.files[0];
+      this.formData.file = event?.target?.files[0];
     },
     handleCloseImagePreview(): void {
       this.isUpload = false;
       this.formData.file = null;
-      this.$refs.imageUploader.value = "";
+      // this.$refs.imageUploader.value = "";/
     },
   },
 });
