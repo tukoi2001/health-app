@@ -97,9 +97,9 @@ export default Vue.extend({
       rules: {
         required: (value: string) => !!value || this.$t("required"),
         min: (v: string) => v.length >= 8 || this.$t("least_characters"),
-        repeatPassword: (v: string) =>
-          v === this.formData.newPassword ||
-          this.$t("repeat_password_not_match"),
+        // repeatPassword: (v: string) =>
+        //   v === this.formData.newPassword ||
+        //   this.$t("repeat_password_not_match"),
       },
     };
   },

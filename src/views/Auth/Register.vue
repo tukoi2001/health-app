@@ -127,8 +127,8 @@ export default Vue.extend({
             /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
           return pattern.test(value) || this.$t("invalid_email");
         },
-        repeatPassword: (v: string) =>
-          v === this.password || this.$t("repeat_password_not_match"),
+        // repeatPassword: (v: string) =>
+        //   v === this.password || this.$t("repeat_password_not_match"),
         checkBox: (value: boolean) =>
           value || this.$t("must_accept_terms_and_conditions"),
       },
