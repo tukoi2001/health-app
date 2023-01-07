@@ -1,0 +1,32 @@
+// Main colors:
+
+$action-blue: #4f77ff;
+$action-green: #34c635;
+$action-purple: #886cff;
+$action-red: #ef3737;
+$action-orange: #ff9513;
+$action-yellow: #f9e492;
+$action-pink: #ffc0ec;
+$action-blue-dark: #001c7f;
+$action-blue-turquoise: #61dcdf;
+
+// Background colors:
+
+$background-dark: #12022f;
+$background-light: #f8fafc;
+$background-alt: #321370;
+$background-white: #ffffff;
+
+// Text colors:
+
+$text-heading: #2d3958;
+$text-normal: #7b88a8;
+$text-white: #ffffff;
+$text-grey: #e7e5ea;
+
+// Border color:
+
+$border-hr-line: #617798;
+
+@import "~vuetify/src/components/VBtn/_variables.scss";
+@import "~vuetify/src/styles/settings/_variables.scss";
