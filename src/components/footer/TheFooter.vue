@@ -1,136 +1,104 @@
 <template>
-  <v-container class="pa-0">
-    <v-row>
-      <v-col cols="3" sm="3" md="3" lg="3">
-        <div class="footer__left">
-          <div class="my-4">
-            <v-img
-              :src="require('@/assets/images/logo/logo.png')"
-              contain
-              alt="logo"
-              height="36"
+  <div class="footer">
+    <v-container>
+      <div class="footer__top">
+        <div class="footer__top-logo">
+          <img :src="require('@/assets/images/logo/logo.png')" alt="logo" />
+        </div>
+        <div class="footer__top-content">
+          <div class="content__title">Company</div>
+          <div
+            v-for="(item, index) in company"
+            :key="index"
+            class="content__subtitle"
+          >
+            {{ item }}
+          </div>
+        </div>
+        <div class="footer__top-content">
+          <div class="content__title">Services</div>
+          <div
+            v-for="(item, index) in services"
+            :key="index"
+            class="content__subtitle"
+          >
+            {{ item }}
+          </div>
+        </div>
+        <div class="footer__top-content">
+          <div class="content__title">Contact</div>
+          <div
+            v-for="(item, index) in contact"
+            :key="index"
+            class="content__subtitle"
+          >
+            {{ item }}
+          </div>
+        </div>
+        <div class="footer__top-subscribe">
+          <div class="content__title">Newsletter</div>
+          <div class="content__des">
+            Subscribe to our newsletter to keep up to date on our marketing,
+            website, design services, and tips.
+          </div>
+          <div class="content__form">
+            <v-text-field
+              v-model="email"
+              placeholder="Enter email"
+              background-color="#E7E5EA"
+              outlined
+              clearable
             />
+            <TheButton :size="'large'">Submit</TheButton>
           </div>
-          <p class="ma-0 footer__left-title">
-            {{ $t("my_address") }}
-          </p>
-          <div class="text-center my-3">
-            <a class="px-3 footer__left-icon" href=""
-              ><v-icon color="#103178" size="30">mdi-facebook</v-icon></a
-            >
-            <a class="px-3 footer__left-icon" href=""
-              ><v-icon color="#103178" size="30"
-                >mdi-facebook-messenger</v-icon
-              ></a
-            >
-            <a class="px-3 footer__left-icon" href=""
-              ><v-icon color="#103178" size="30">mdi-email-outline</v-icon></a
-            >
+          <div class="content__sub-des">
+            We hate spam as much as you do. We will never, ever send you such
+            emails.
           </div>
         </div>
-      </v-col>
-      <v-col cols="4" sm="4" md="4" lg="4">
-        <div class="footer__middle px-4">
-          <h4 class="ma-0 footer__middle-title pt-2">
-            {{ $t("need_help") }}
-          </h4>
-          <div class="footer__middle-contact py-4">
-            <h4 class="footer__middle-contact-title">
-              <v-icon size="36" color="#fd8d27" class="mr-3">mdi-phone</v-icon
-              >{{ phoneNumber }}
-            </h4>
-            <div class="pt-3">
-              <p class="ma-0 footer__middle-contact-subtitle">
-                {{ $t("monday_friday") }}
-              </p>
-              <p class="ma-0 footer__middle-contact-subtitle">
-                {{ $t("saturday") }}
-              </p>
-            </div>
-          </div>
-          <div class="py-4">
-            <a
-              class="footer__middle-contact-email"
-              :href="`mailto:${defaultEmail}`"
-              ><v-icon size="23px" class="mr-2" color="#103178"
-                >mdi-email-outline</v-icon
-              >{{ defaultEmail }}</a
-            >
-          </div>
-        </div>
-      </v-col>
-      <v-col cols="2" sm="2" md="2" lg="2">
-        <div class="footer__right mb-4">
-          <div class="footer__right-box">
-            <h4 class="footer__right-box-title mb-2">{{ $t("policy") }}</h4>
-            <ul class="footer__right-box-list pa-0">
-              <li class="mb-2">
-                <router-link class="footer__right-box-link" to="/">{{
-                  $t("terms_and_conditions")
-                }}</router-link>
-              </li>
-              <li class="mb-2">
-                <router-link class="footer__right-box-link" to="/">{{
-                  $t("payment_method")
-                }}</router-link>
-              </li>
-              <li class="mb-2">
-                <router-link class="footer__right-box-link" to="/">{{
-                  $t("product_warranty")
-                }}</router-link>
-              </li>
-              <li class="mb-2">
-                <router-link class="footer__right-box-link" to="/">{{
-                  $t("return_process")
-                }}</router-link>
-              </li>
-              <li>
-                <router-link class="footer__right-box-link" to="/">{{
-                  $t("payment_security")
-                }}</router-link>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </v-col>
-      <v-col cols="3" sm="3" md="3" lg="3">
-        <div class="footer__register text-left pl-10">
-          <p class="footer__right-des mb-4">
-            {{ $t("please_come_with_us") }}
-          </p>
-          <p class="footer__right-des">
-            {{ $t("receive_new_and_free_content") }}
-          </p>
-        </div>
-      </v-col>
-    </v-row>
-    <v-row class="footer__bottom">
-      <v-col cols="6" sm="6" md="6" lg="6" class="pa-0">
+      </div>
+      <div class="footer__bottom">
         <div class="footer__bottom-title">
-          {{ $t("copyright") }}
+          © 2022 Pollock LLC. All Rights Reserved. Terms & Conditions. Privacy
+          Policy.
         </div>
-      </v-col>
-      <v-col cols="6" sm="6" md="6" lg="6" class="pa-0">
-        <v-img
-          :src="require('@/assets/images/footer/payment.png')"
-          contain
-          alt="logo"
-          height="40"
-        />
-      </v-col>
-    </v-row>
-  </v-container>
+        <div class="footer__bottom-actions">
+          <TheButton fab :size="'large'"><FacebookIcon /></TheButton>
+          <TheButton fab :size="'large'"><TwitterIcon /></TheButton>
+          <TheButton fab :size="'large'"><LinkedInIcon /></TheButton>
+        </div>
+      </div>
+    </v-container>
+  </div>
 </template>
 
 <script lang="ts">
 import Vue from "vue";
-import { PHONE_NUMBER, DEFAULT_EMAIL } from "@/configs/constant";
+import TheButton from "@/components/FormUI/TheButton.vue";
+import FacebookIcon from "@/components/ui/FacebookIcon.vue";
+import TwitterIcon from "@/components/ui/TwitterIcon.vue";
+import LinkedInIcon from "@/components/ui/LinkedInIcon.vue";
+
 export default Vue.extend({
   name: "TheFooter",
+  components: {
+    TheButton,
+    FacebookIcon,
+    TwitterIcon,
+    LinkedInIcon,
+  },
   data() {
     return {
-      phoneNumber: PHONE_NUMBER,
-      defaultEmail: DEFAULT_EMAIL,
+      email: "",
+      company: ["About", "Work", "Careers", "Pricing", "Blog"],
+      services: [
+        "Branding",
+        "Websites",
+        "Development",
+        "Strategy",
+        "Platforms",
+      ],
+      contact: ["Help Desk", "Docs", "Open a Ticket", "Chat", "Forum"],
     };
   },
 });
@@ -138,126 +106,81 @@ export default Vue.extend({
 
 <style lang="scss" scoped>
 .footer {
-  &__left {
-    border-right: 2px solid #f0f2f5;
+  padding: 105px 0 30px;
+  background-color: $background-grey;
 
-    &-title {
-      line-height: 26px;
-      text-align: left;
-      font-size: 14px;
-      font-weight: 400;
-      color: #5b6c8f;
-      text-align: center;
+  &__top {
+    @include flexBox(center, flex-start);
+    gap: 30px;
+    padding-bottom: 120px;
+
+    &-logo {
+      width: calc(15% - 24px);
+      cursor: pointer;
     }
 
-    &-icon {
-      text-decoration: none;
-    }
-  }
-
-  &__middle {
-    &-title {
-      font-size: 18px;
-      font-weight: 600;
-      line-height: 26px;
-      color: #103178;
+    &-content {
+      width: calc(15% - 24px);
     }
 
-    &-contact {
-      border-bottom: 2px solid #f0f2f5;
+    &-subscribe {
+      width: calc(40% - 24px);
+      flex-grow: 1;
+    }
 
-      &-title {
-        font-size: 24px;
-        font-weight: 600;
-        line-height: 36px;
-        color: #103178;
+    .content {
+      &__title {
+        @include headline3();
+        color: $text-white;
+        padding-bottom: 20px;
       }
 
-      &-subtitle {
-        font-size: 14px;
-        color: #5b6c8f;
+      &__subtitle {
+        @include linkSmall();
+        color: $text-grey;
+        transition: all 0.3s ease-in-out;
+
+        &:not(:last-of-type) {
+          margin-bottom: 10px;
+        }
+
+        &:hover {
+          transform: scale(1.02);
+        }
       }
 
-      &-email {
-        text-decoration: none;
-        font-weight: 700;
-        color: #103178;
-        font-size: 16px;
-        line-height: 23px;
-      }
-    }
-  }
-
-  &__right {
-    &-des {
-      font-size: 14px;
-      font-weight: 500;
-      color: #103178;
-      line-height: 19px;
-    }
-
-    &-box {
-      &-title {
-        font-weight: 700;
-        color: #103178;
-        font-size: 16px;
-        line-height: 23px;
+      &__des {
+        @include paragraph2();
+        color: $text-grey;
       }
 
-      &-link {
-        font-size: 13px;
-        text-decoration: none;
-        font-weight: 500;
-        color: #103178;
-        line-height: 19px;
+      &__form {
+        @include flexBox(center, flex-start);
+        gap: 6px;
+        padding: 25px 0 0;
+      }
+
+      &__sub-des {
+        @include paragraph3();
+        color: $text-grey;
       }
     }
   }
 
   &__bottom {
-    padding: 20px 0;
-    border-top: 2px solid #f0f2f5;
+    @include flexBox(space-between);
+    border-top: 1px solid $text-normal;
+    padding-top: 30px;
 
     &-title {
-      font-size: 13px;
-      font-weight: 500;
-      color: #103178;
-      line-height: 40px;
-    }
-  }
-}
-
-::v-deep {
-  .v-text-field__slot {
-    label {
-      font-size: 14px;
+      @include paragraph2();
+      color: $text-grey;
     }
 
-    input {
-      font-size: 14px;
-      font-weight: 600;
+    &-actions {
+      @include flexBox(flex-end);
+      gap: 20px;
     }
-  }
-
-  .footer__register-button {
-    .v-btn__content {
-      color: #fff;
-      font-size: 17px;
-      font-weight: 600;
-    }
-  }
-
-  .v-text-field__details {
-    margin-bottom: 5px !important;
-
-    .v-messages__message {
-      font-weight: 600;
-    }
-  }
-  .v-label {
-    font-size: 13px;
-    font-weight: 500;
-    line-height: 20px;
   }
 }
 </style>

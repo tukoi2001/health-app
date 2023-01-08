@@ -7,9 +7,7 @@
             <v-list-item-avatar>
               <v-img :src="require('@/assets/images/logo/logo.svg')" />
             </v-list-item-avatar>
-            <v-list-item-title class="side-bar__title">
-              {{ logo }}
-            </v-list-item-title>
+            <v-list-item-title class="side-bar__title"> 123 </v-list-item-title>
           </v-list-item>
         </v-list>
 
@@ -65,14 +63,12 @@
 
 <script lang="ts">
 import Vue from "vue";
-import { DEFAULT_LOGO } from "@/configs/constant";
 import { App } from "@/types/app";
 
 export default Vue.extend({
   name: "SideBar",
   data() {
     return {
-      logo: DEFAULT_LOGO,
       drawer: true,
       mini: true,
     };

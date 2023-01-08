@@ -1,34 +1,25 @@
 <template>
   <v-main>
-    <v-layout column fill-height fill-width>
-      <template>
+    <perfect-scrollbar>
+      <div class="layout-master">
         <TheHeader />
-        <div class="layout-master">
-          <SideBar />
-          <perfect-scrollbar>
-            <div class="layout-master__main">
-              <slot></slot>
-              <TheFooter />
-            </div>
-          </perfect-scrollbar>
-        </div>
-      </template>
-    </v-layout>
+        <slot></slot>
+        <TheFooter />
+      </div>
+    </perfect-scrollbar>
   </v-main>
 </template>
 
 <script lang="ts">
 import Vue from "vue";
-import TheHeader from "@/components/header/TheHeader.vue";
-import SideBar from "@/components/common/SideBar.vue";
 import TheFooter from "@/components/footer/TheFooter.vue";
+import TheHeader from "@/components/header/TheHeader.vue";
 
 export default Vue.extend({
   name: "DefaultLayout",
   components: {
-    TheHeader,
-    SideBar,
     TheFooter,
+    TheHeader,
   },
 });
 </script>
@@ -45,15 +36,8 @@ export default Vue.extend({
 }
 
 .layout-master {
-  display: flex;
-  overflow: hidden;
   width: 100%;
   height: 100%;
-
-  &__main {
-    padding: 20px;
-    width: 100%;
-  }
 }
 
 ::v-deep {

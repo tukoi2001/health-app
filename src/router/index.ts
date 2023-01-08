@@ -82,7 +82,7 @@ const router = new VueRouter({
 });
 
 router.beforeEach((to, from, next) => {
-  document.title = `Heath | ${to.meta?.title}`;
+  document.title = `Pollock | ${to.meta?.title}`;
   next();
 });
 
