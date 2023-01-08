@@ -74,13 +74,24 @@
   );
 }
 
-@mixin link() {
+@mixin linkLarge() {
   @include style-text(
     $font-size: 15px,
     $line-height: 24px,
     $letter-spacing: -0.3px
   );
   text-transform: uppercase;
+  cursor: pointer;
+}
+
+@mixin linkSmall() {
+  @include style-text(
+    $font-size: 14px,
+    $line-height: 24px,
+    $letter-spacing: -0.3px
+  );
+  text-transform: uppercase;
+  cursor: pointer;
 }
 
 @mixin paragraph1() {
@@ -111,4 +122,10 @@
     $line-height: 24px,
     $letter-spacing: -0.3px
   );
+}
+
+@mixin flexBox($justify-content: center, $align-items: center) {
+  display: flex;
+  justify-content: $justify-content;
+  align-items: $align-items;
 }

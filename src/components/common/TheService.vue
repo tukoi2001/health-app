@@ -16,7 +16,6 @@
 
 <script lang="ts">
 import Vue from "vue";
-import { PHONE_NUMBER } from "@/configs/constant";
 
 export default Vue.extend({
   name: "TheService",
@@ -44,9 +43,7 @@ export default Vue.extend({
         {
           id: "4",
           title: this.$t("title_customer_contact"),
-          subtitle: this.$t("subtitle_customer_contact", {
-            phone: PHONE_NUMBER,
-          }),
+          subtitle: this.$t("subtitle_customer_contact", {}),
           icon: "mdi-card-account-phone",
         },
       ],

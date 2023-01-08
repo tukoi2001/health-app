@@ -1,88 +1,149 @@
 <template>
   <div class="header">
     <v-container>
-      <v-row class="align-center">
-        <v-col cols="12" sm="3" md="3" lg="3" class="pa-0">
-          <v-img
-            class="header__logo"
-            :src="require('@/assets/images/logo/logo.png')"
-            contain
-            alt="logo"
-            height="54"
-          />
-        </v-col>
-        <v-col cols="12" sm="5" md="5" lg="5" class="pa-0">
-          <div class="header__search mt-5">
-            <v-text-field
-              :placeholder="$t('search')"
-              rounded
-              clearable
-              dense
-              solo
-              height="46"
-            >
-              <template v-slot:append>
-                <v-icon @click.prevent="" color="#103178"> mdi-magnify </v-icon>
-              </template>
-            </v-text-field>
+      <div class="header__wrapper">
+        <div class="header__logo">
+          <img :src="require('@/assets/images/logo/logo.png')" alt="logo" />
+        </div>
+        <div class="header__nav">
+          <router-link
+            class="header__nav-action"
+            v-for="item in nav"
+            :key="item.id"
+            :to="item.to"
+            >{{ item.title }}</router-link
+          >
+        </div>
+        <div class="header__setting">
+          <div class="header__setting-main">
+            <TheButton :size="'large'" fab :btnStyle="'no-bg'" text icon
+              ><SearchIcon
+            /></TheButton>
+            <TheButton :size="'large'" fab :btnStyle="'no-bg'" text icon
+              ><SettingIcon
+            /></TheButton>
+            <TheButton :size="'large'" fab :btnStyle="'no-bg'" text icon
+              ><CartIcon
+            /></TheButton>
           </div>
-        </v-col>
-        <v-col cols="12" sm="4" md="4" lg="4">
-          <v-row>
-            <v-col cols="5" sm="5" md="5" lg="5">
-              <TheCountry />
-            </v-col>
-            <v-col cols="7" sm="7" md="7" lg="7">
-              <TheSetting />
-            </v-col>
-          </v-row>
-        </v-col>
-      </v-row>
+          <TheButton
+            class="header__setting-primary"
+            :size="'large'"
+            outlined
+            :btnStyle="'text'"
+            >Sign Up</TheButton
+          >
+        </div>
+      </div>
     </v-container>
   </div>
 </template>
 
 <script lang="ts">
 import Vue from "vue";
-import TheCountry from "./TheCountry.vue";
-import TheSetting from "./TheSetting.vue";
+import TheButton from "@/components/FormUI/TheButton.vue";
+import SearchIcon from "@/components/ui/SearchIcon.vue";
+import CartIcon from "@/components/ui/CartIcon.vue";
+import SettingIcon from "@/components/ui/SettingIcon.vue";
 
 export default Vue.extend({
   name: "TheHeader",
-  components: { TheCountry, TheSetting },
+  components: { TheButton, SearchIcon, CartIcon, SettingIcon },
+  data() {
+    return {
+      nav: [
+        {
+          id: 1,
+          title: "Home",
+          to: "/",
+        },
+        {
+          id: 2,
+          title: "Services",
+          to: "/services",
+        },
+        {
+          id: 3,
+          title: "About",
+          to: "/about",
+        },
+        {
+          id: 4,
+          title: "Pages",
+          to: "/pages",
+        },
+        {
+          id: 5,
+          title: "Blog",
+          to: "/blog",
+        },
+        {
+          id: 6,
+          title: "Contact",
+          to: "/contact",
+        },
+      ],
+    };
+  },
 });
 </script>
 
 <style lang="scss" scoped>
 .header {
-  border-bottom: 2px solid #f0f2f5;
+  height: 82px;
+  padding-top: 16px;
+
+  &__wrapper {
+    @include flexBox();
+    gap: 30px;
+  }
 
   &__logo {
-    width: 216px;
     cursor: pointer;
-  }
-}
-
-::v-deep {
-  .v-input__slot {
-    background-color: #f0f2f5 !important;
+    flex-shrink: 0;
   }
 
-  .theme--light.v-input input {
-    color: #5b6c8f !important;
-  }
+  &__nav {
+    @include flexBox();
+    gap: 30px;
+    flex-grow: 1;
 
-  @media screen and (max-width: 1265px) {
-    .v-input__slot {
-      height: 40px !important;
+    &-action {
+      @include linkLarge();
+      text-decoration: none;
+      color: $text-white;
+      transition: all 0.3s ease;
+
+      &:hover {
+        color: $text-normal;
+      }
+    }
+
+    .router-link-exact-active {
+      position: relative;
+      color: $text-normal;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: $action-green;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+      }
     }
   }
-}
 
-@media screen and (max-width: 1265px) {
-  .header {
-    &__logo {
-      width: 180px;
+  &__setting {
+    @include flexBox();
+    gap: 20px;
+
+    &-primary {
+      background-color: transparent !important;
+      color: $text-white !important;
     }
   }
 }
