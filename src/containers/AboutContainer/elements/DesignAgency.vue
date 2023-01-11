@@ -119,12 +119,14 @@ export default Vue.extend({
     &-title {
       @include headline2();
       color: $text-heading;
+      max-width: 470px;
     }
 
     &-description {
       @include paragraph1();
       margin: 50px 0 70px;
       color: $text-normal;
+      max-width: 470px;
     }
 
     &-image {
