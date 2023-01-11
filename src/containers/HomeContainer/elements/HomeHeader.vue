@@ -29,7 +29,7 @@ export default Vue.extend({
   height: 100%;
   width: 100%;
   max-height: 950px;
-  margin-top: -82px;
+  margin-top: -100px;
   background-image: url("../../../assets/images/home/header.png");
   background-size: cover;
   background-repeat: no-repeat;
