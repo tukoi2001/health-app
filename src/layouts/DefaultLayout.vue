@@ -2,7 +2,7 @@
   <v-main>
     <perfect-scrollbar>
       <div class="layout-master">
-        <TheHeader />
+        <component :is="headerComponent" />
         <slot></slot>
         <TheFooter />
       </div>
@@ -14,12 +14,22 @@
 import Vue from "vue";
 import TheFooter from "@/components/footer/TheFooter.vue";
 import TheHeader from "@/components/header/TheHeader.vue";
+import HeaderMain from "@/components/header/HeaderMain.vue";
 
 export default Vue.extend({
   name: "DefaultLayout",
   components: {
     TheFooter,
     TheHeader,
+    HeaderMain,
+  },
+  computed: {
+    isHomePage(): boolean {
+      return this.$route.name === "Home";
+    },
+    headerComponent(): string {
+      return this.isHomePage ? "TheHeader" : "HeaderMain";
+    },
   },
 });
 </script>

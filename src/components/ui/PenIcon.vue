@@ -1,0 +1,46 @@
+<template>
+  <svg
+    width="40"
+    height="40"
+    viewBox="0 0 40 40"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M20 31.6667L31.6667 20L36.6667 25L25 36.6667L20 31.6667Z"
+      stroke="#886CFF"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+    <path
+      d="M30.0002 21.6666L27.5002 9.16659L3.3335 3.33325L9.16683 27.4999L21.6668 29.9999L30.0002 21.6666Z"
+      stroke="#886CFF"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+    <path
+      d="M3.3335 3.33325L15.9768 15.9766"
+      stroke="#886CFF"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+    <path
+      d="M18.3333 21.6667C20.1743 21.6667 21.6667 20.1743 21.6667 18.3333C21.6667 16.4924 20.1743 15 18.3333 15C16.4924 15 15 16.4924 15 18.3333C15 20.1743 16.4924 21.6667 18.3333 21.6667Z"
+      stroke="#886CFF"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+  </svg>
+</template>
+
+<script lang="ts">
+import Vue from "vue";
+
+export default Vue.extend({
+  name: "PenIcon",
+});
+</script>

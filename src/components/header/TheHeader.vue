@@ -90,8 +90,8 @@ export default Vue.extend({
 
 <style lang="scss" scoped>
 .header {
-  height: 82px;
-  padding-top: 16px;
+  height: 100px;
+  padding: 16px 0;
 
   &__wrapper {
     @include flexBox();
