@@ -1,22 +1,15 @@
 <template>
-  <DefaultLayout>
-    <Breadcrumbs :titleOne="$t('contact')" />
-    <MainContact />
-  </DefaultLayout>
+  <ContactUsContainer />
 </template>
 
 <script lang="ts">
 import Vue from "vue";
-import DefaultLayout from "@/layouts/DefaultLayout.vue";
-import Breadcrumbs from "@/components/common/Breadcrumbs.vue";
-import MainContact from "./elements/MainContact.vue";
+import ContactUsContainer from "@/containers/ContactUsContainer/ContactUsContainer.vue";
 
 export default Vue.extend({
   name: "ContactUs",
   components: {
-    DefaultLayout,
-    Breadcrumbs,
-    MainContact,
+    ContactUsContainer,
   },
 });
 </script>

@@ -81,7 +81,7 @@ export default Vue.extend({
 <style lang="scss" scoped>
 .client-review {
   padding: 120px 0;
-  background-color: $background-white;
+  background-color: $background-light;
 
   &__wrapper {
     @include flexBox();
