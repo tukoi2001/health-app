@@ -45,6 +45,17 @@ const routes: Array<RouteConfig> = [
       title: "Contact",
     },
   },
+  {
+    path: "/services",
+    name: "Services",
+    component: () =>
+      import(
+        /* webpackChunkName: "about" */ "../views/Service/ServicePage.vue"
+      ),
+    meta: {
+      title: "Services",
+    },
+  },
   // Auth
   {
     path: "/login",
