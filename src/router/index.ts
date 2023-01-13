@@ -56,6 +56,15 @@ const routes: Array<RouteConfig> = [
       title: "Services",
     },
   },
+  {
+    path: "/pages",
+    name: "Pages",
+    component: () =>
+      import(/* webpackChunkName: "about" */ "../views/Pages/ThePages.vue"),
+    meta: {
+      title: "Pages",
+    },
+  },
   // Auth
   {
     path: "/login",

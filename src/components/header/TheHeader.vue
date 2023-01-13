@@ -7,8 +7,8 @@
         </div>
         <div class="header__nav">
           <router-link
-            class="header__nav-action"
             v-for="item in nav"
+            class="header__nav-action"
             :key="item.id"
             :to="item.to"
             >{{ item.title }}</router-link
