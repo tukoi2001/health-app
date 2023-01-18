@@ -65,6 +65,38 @@ const routes: Array<RouteConfig> = [
       title: "Pages",
     },
   },
+  {
+    path: "/blog",
+    component: () =>
+      import(/* webpackChunkName: "about" */ "../views/Blogs/BlogsPage.vue"),
+    meta: {
+      title: "Blogs",
+    },
+    children: [
+      {
+        path: "",
+        name: "Blogs",
+        component: () =>
+          import(
+            /* webpackChunkName: "about" */ "../containers/BlogContainer/elements/Blog/TheBlog.vue"
+          ),
+        meta: {
+          title: "Blogs",
+        },
+      },
+      {
+        path: ":blogId",
+        name: "Blog Details",
+        component: () =>
+          import(
+            /* webpackChunkName: "about" */ "../containers/BlogContainer/elements/BlogDetail/BlogDetail.vue"
+          ),
+        meta: {
+          title: "Blogs Details",
+        },
+      },
+    ],
+  },
   // Auth
   {
     path: "/login",
