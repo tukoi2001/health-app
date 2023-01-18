@@ -129,3 +129,18 @@
   justify-content: $justify-content;
   align-items: $align-items;
 }
+
+@mixin truncate-multiline-line($line: 2) {
+  $webkit: -webkit-box;
+  display: $webkit;
+  -webkit-line-clamp: $line;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@mixin truncate-text() {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
