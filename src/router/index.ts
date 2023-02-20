@@ -97,6 +97,40 @@ const routes: Array<RouteConfig> = [
       },
     ],
   },
+  {
+    path: "/shop",
+    component: () =>
+      import(
+        /* webpackChunkName: "about" */ "../views/Product/ProductPage.vue"
+      ),
+    meta: {
+      title: "Shopping",
+    },
+    children: [
+      {
+        path: "",
+        name: "Products",
+        component: () =>
+          import(
+            /* webpackChunkName: "about" */ "../containers/ProductContainer/MainProduct/MainProduct.vue"
+          ),
+        meta: {
+          title: "Shopping",
+        },
+      },
+      // {
+      //   path: ":blogId",
+      //   name: "Blog Details",
+      //   component: () =>
+      //     import(
+      //       /* webpackChunkName: "about" */ "../containers/BlogContainer/elements/BlogDetail/BlogDetail.vue"
+      //     ),
+      //   meta: {
+      //     title: "Blogs Details",
+      //   },
+      // },
+    ],
+  },
   // Auth
   {
     path: "/login",
@@ -131,6 +165,13 @@ const router = new VueRouter({
   mode: "history",
   base: process.env.BASE_URL,
   routes,
+  scrollBehavior() {
+    return {
+      x: 0,
+      y: 0,
+      behavior: "smooth",
+    };
+  },
 });
 
 router.beforeEach((to, from, next) => {
